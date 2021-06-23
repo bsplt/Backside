@@ -1,186 +1,47 @@
 import * as React from "react";
 import Layout from "../components/layout.js";
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
-const headingAccentStyles = {
-  color: "#663399",
-};
-const paragraphStyles = {
-  marginBottom: 48,
-};
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-};
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-};
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-};
-
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-};
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-};
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-};
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-};
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-};
-
-// data
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-];
-
-// markup
 const IndexPage = () => {
   return (
     <Layout>
-      <main style={pageStyles}>
-        <title>Home Page</title>
-        <h1 style={headingStyles}>
-          Congratulations
-          <br />
-          <span style={headingAccentStyles}>
-            — you just made a Gatsby site!{" "}
-          </span>
-          <span role="img" aria-label="Party popper emojis">
-            🎉🎉🎉
-          </span>
-        </h1>
-        <p style={paragraphStyles}>
-          Edit <code style={codeStyles}>src/pages/index.js</code> to see this
-          page update in real-time.{" "}
-          <span role="img" aria-label="Sunglasses smiley emoji">
-            😎
-          </span>
+      <aside>
+        &#x2554;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2566;&#x2566;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x1FB91;&#x1FB91;&#x2550;&#x2550;&#x1FB93;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2588;&#x2588;&#x2588;&#x2550;&#x2550;&#x2588;&#x2588;&#x2588;&#x2550;&#x2550;&#x2588;&#x2589;&#x2550;&#x2550;&#x2588;&#x2588;&#x2588;&#x2588;&#x258B;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2564;&#x2550;&#x2550;&#x2557;
+        <br />
+        &#x2551;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x255A;&#x255D;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x2571;&nbsp;&#x2571;&#x005F;&#x2571;&nbsp;&#x2572;&#x2572;&nbsp;&nbsp;&nbsp;&#x0021;&#x0021;&nbsp;&nbsp;&#x1FB87;&#x2588;&#x2588;&nbsp;&nbsp;&nbsp;&#x2588;&#x258B;&#x2583;&nbsp;&nbsp;&#x2588;&#x2589;&nbsp;&nbsp;&#x1FB63;&#x2588;&#x2588;&#x1FB9C;&nbsp;&nbsp;&#x1FB9E;&#x256D;&#x256E;&#x256D;&#x2524;&nbsp;&nbsp;&#x2551;
+        <br />
+        &#x2551;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x255F;&#x2562;&#x2500;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x2571;&#x2572;&#x2571;&#x2571;&#x2571;&nbsp;&#x1FBB9;&#x1FBBA;&#x2572;&#x2572;&nbsp;&nbsp;&#x0021;&#x0021;&nbsp;&nbsp;&#x1FB88;&#x2588;&#x2588;&nbsp;&nbsp;&nbsp;&#x2585;&#x2592;&#x258C;&#x2581;&nbsp;&#x2588;&#x2588;&nbsp;&nbsp;&nbsp;&#x1FB8A;&#x2593;&nbsp;&nbsp;&#x1FB9E;&#x256D;&#x256F;&#x2570;&#x256F;&#x2570;&#x2500;&#x256E;&#x2551;
+        <br />
+        &#x2551;&#x25A9;&#x25A9;&#x25A9;&#x25A9;&#x25A9;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x2567;&#x2564;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x2572;&#x2571;&#x2571;&#x2571;&nbsp;&#x2571;&#x2572;&nbsp;&nbsp;&#x2572;&#x2572;&nbsp;&#x0021;&#x0021;&nbsp;&nbsp;&nbsp;&#x1FB8A;&#x1FB85;&nbsp;&nbsp;&nbsp;&#x1FB85;&#x1FB86;&nbsp;&nbsp;&nbsp;&#x2588;&#x2588;&nbsp;&nbsp;&nbsp;&#x2593;&#x2591;&nbsp;&#x1FB9E;&#x256D;&#x256F;&nbsp;&#x1FBC0;&#x1FBBB;&nbsp;&#x256D;&#x256F;&#x2551;
+        <br />
+        &#x2551;&#x1FB5D;&#x1FB59;&#x003F;&#x1FB65;&#x25A9;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x1FB22;&#x1FB23;&#x1FB24;&#x1FBB4;&nbsp;&nbsp;&#x2572;&#x2572;&#x005F;&#x2571;&#x005F;&#x2571;&nbsp;&nbsp;&#x2571;&#x2571;&nbsp;&#x0021;&#x0021;&nbsp;&nbsp;&#x1FB87;&#x2593;&#x2591;&nbsp;&nbsp;&nbsp;&#x2587;&#x2585;&nbsp;&nbsp;&nbsp;&#x1FB8A;&#x2588;&nbsp;&nbsp;&nbsp;&#x1FB8A;&#x2593;&#x1FB9E;&#x2592;&#x2502;&nbsp;&#x005E;&nbsp;&nbsp;&nbsp;&#x2570;&#x2500;&#x2562;
+        <br />
+        &#x2551;&#x258B;&#x003F;&#x1FB48;&#x1FB43;&#x25A9;&#x1FBC1;&#x1FBC2;&#x1FBC3;&#x0073;&#x0070;&#x006C;&#x0074;&#x1FB97;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x2572;&#x005F;&#x2571;&#x2571;&#x2572;&#x005F;&#x2571;&#x2571;&nbsp;&nbsp;&#x0021;&#x0021;&nbsp;&nbsp;&nbsp;&#x2588;&#x2588;&nbsp;&nbsp;&nbsp;&#x2588;&#x2588;&nbsp;&nbsp;&nbsp;&#x2588;&#x2588;&#x1FB3C;&nbsp;&nbsp;&#x2588;&#x2588;&#x2592;&#x2592;&#x2591;&nbsp;&#x005E;&nbsp;&nbsp;&nbsp;&nbsp;&#x1FBC5;&#x2551;
+        <br />
+        &#x255A;&#x25A9;&#x25A9;&#x25A9;&#x25A9;&#x25A9;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&#x2584;&#x2588;&#x2588;&#x2588;&#x258F;&#x002D;&#x2581;&#x2588;&#x2588;&#x002D;&nbsp;&#x002D;&#x2588;&#x2588;&#x2588;&#x258D;&nbsp;&#x1FB8A;&#x2588;&#x002D;&#x2592;&#x2592;&#x2591;&#x1FB8F;&#x25A9;&nbsp;&#x2550;&#x2550;&#x2550;&#x255D;
+        <br />
+        But I must explain to you how all this mistaken idea of
+        <br />
+        ....v....1....v....2....v....3....v....4....v....5....v....6....v....7
+      </aside>
+      <main>
+        <p>
+          ....v....1....v....2....v....3....v....4....v....5....v....6....v....7
+          But I must explain to you how all this mistaken idea of denouncing
+          pleasure and praising pain was born and I will give you a complete
+          account of the system, and expound the actual teachings of the great
+          explorer of the truth, the master-builder of human happiness. No one
+          rejects, dislikes, or avoids pleasure itself, because it is pleasure,
+          but because those who do not know how to pursue pleasure rationally
+          encounter consequences that are extremely painful. Nor again is there
+          anyone who loves or pursues or desires to obtain pain of itself,
+          because it is pain, but because occasionally circumstances occur in
+          which toil and pain can procure him some great pleasure. To take a
+          trivial example, which of us ever undertakes laborious physical
+          exercise, except to obtain some advantage from it? But who has any
+          right to find fault with a man who chooses to enjoy a pleasure that
+          has no annoying consequences, or one who avoids a pain that produces
+          no resultant pleasure?
         </p>
-        <ul style={listStyles}>
-          <li style={docLinkStyle}>
-            <a
-              style={linkStyle}
-              href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-            >
-              {docLink.text}
-            </a>
-          </li>
-          {links.map((link) => (
-            <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-              <span>
-                <a
-                  style={linkStyle}
-                  href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-                >
-                  {link.text}
-                </a>
-                {link.badge && (
-                  <span style={badgeStyle} aria-label="New Badge">
-                    NEW!
-                  </span>
-                )}
-                <p style={descriptionStyle}>{link.description}</p>
-              </span>
-            </li>
-          ))}
-        </ul>
-        <img
-          alt="Gatsby G Logo"
-          src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-        />
       </main>
     </Layout>
   );

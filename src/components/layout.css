@@ -1,4 +1,66 @@
-div {
-  background: red;
-  color: white;
+@font-face {
+  font-family: "Quadraat Sans Mono";
+  src: url("../assets/fonts/QuadraatSaMonoOT.woff2");
+}
+
+@font-face {
+  font-family: "Unscii";
+  src: url("../assets/fonts/unscii-16.woff2");
+}
+
+:root {
+  --count: 64;
+  --margin: 2;
+}
+
+html {
+  font-size: calc(
+    clamp(150vw, (100vw + 688px), 200vw) / (var(--count) + var(--margin) * 2)
+  );
+}
+
+@media (max-width: 688px) {
+  :root {
+    --count: 40;
+  }
+
+  html {
+    font-size: calc(200vw / (var(--count) + var(--margin) * 2) * 1);
+  }
+}
+
+body {
+  background: #4400cc;
+  color: #aaaaaa;
+}
+
+.layout {
+  width: calc((var(--count)) * 0.5rem);
+  margin-left: calc(var(--margin) * 0.5rem);
+  margin-right: calc(var(--margin) * 0.5rem);
+  overflow: hidden;
+}
+
+aside {
+  font-family: "Unscii", "Courier New", monospace;
+  white-space: nowrap;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+main {
+  font-family: "Quadraat Sans Mono", "Courier New", monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.075rem;
+  line-height: 1rem;
+}
+
+::selection {
+  color: darkgray;
+  background: rgba(255, 255, 0, 0.589);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
