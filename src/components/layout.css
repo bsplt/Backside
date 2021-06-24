@@ -11,11 +11,14 @@
 :root {
   --count: 64;
   --margin: 2;
+  --colorA: #74569b;
+  --colorB: #f7ffae;
 }
 
 html {
   font-size: calc(
-    clamp(150vw, (100vw + 688px), 200vw) / (var(--count) + var(--margin) * 2)
+    clamp(150vw, (100vw * 1.25 + 688px * 0.75), 200vw) /
+      (var(--count) + var(--margin) * 2)
   );
 }
 
@@ -30,14 +33,18 @@ html {
 }
 
 body {
-  background: #4400cc;
-  color: #aaaaaa;
+  background: var(--colorA);
+  color: var(--colorB);
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
 }
 
 .layout {
   width: calc((var(--count)) * 0.5rem);
   margin-left: calc(var(--margin) * 0.5rem);
   margin-right: calc(var(--margin) * 0.5rem);
+  margin-top: calc(var(--margin) * 0.5rem);
   overflow: hidden;
 }
 
@@ -55,12 +62,21 @@ main {
   line-height: 1rem;
 }
 
-::selection {
-  color: darkgray;
-  background: rgba(255, 255, 0, 0.589);
-}
-
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+::selection {
+  color: var(--colorA);
+  background: var(--colorB);
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--colorB);
+  outline: 0;
 }
