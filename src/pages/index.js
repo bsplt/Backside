@@ -18,14 +18,9 @@ const IndexPage = () => {
         &#x2551;&#x258B;&#x003F;&#x1FB48;&#x1FB43;&#x25A9;&#x1FBC1;&#x1FBC2;&#x1FBC3;&#x0073;&#x0070;&#x006C;&#x0074;&#x1FB97;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x2572;&#x005F;&#x2571;&#x2571;&#x2572;&#x005F;&#x2571;&#x2571;&nbsp;&nbsp;&#x0021;&#x0021;&nbsp;&nbsp;&nbsp;&#x2588;&#x2588;&nbsp;&nbsp;&nbsp;&#x2588;&#x2588;&nbsp;&nbsp;&nbsp;&#x2588;&#x2588;&#x1FB3C;&nbsp;&nbsp;&#x2588;&#x2588;&#x2592;&#x2592;&#x2591;&nbsp;&#x005E;&nbsp;&nbsp;&nbsp;&nbsp;&#x1FBC5;&#x2551;
         <br />
         &#x255A;&#x25A9;&#x25A9;&#x25A9;&#x25A9;&#x25A9;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&nbsp;&#x002D;&#x2584;&#x2588;&#x2588;&#x2588;&#x258F;&#x002D;&#x2581;&#x2588;&#x2588;&#x002D;&nbsp;&#x002D;&#x2588;&#x2588;&#x2588;&#x258D;&nbsp;&#x1FB8A;&#x2588;&#x002D;&#x2592;&#x2592;&#x2591;&#x1FB8F;&#x25A9;&nbsp;&#x2550;&#x2550;&#x2550;&#x255D;
-        <br />
-        But I must explain to you how all this mistaken idea of
-        <br />
-        ....v....1....v....2....v....3....v....4....v....5....v....6....v....7
       </aside>
       <main>
         <p>
-          ....v....1....v....2....v....3....v....4....v....5....v....6....v....7
           But I must explain to you how all this mistaken idea of denouncing
           pleasure and praising pain was born and I will give you a complete
           account of the system, and expound the actual teachings of the great
@@ -41,6 +36,9 @@ const IndexPage = () => {
           right to find fault with a man who chooses to enjoy a pleasure that
           has no annoying consequences, or one who avoids a pain that produces
           no resultant pleasure?
+        </p>
+        <p>
+          ....v....1....v....2....v....3....v....4....v....5....v....6....v....7
         </p>
       </main>
     </Layout>
