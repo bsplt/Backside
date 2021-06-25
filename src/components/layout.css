@@ -13,6 +13,9 @@
   --margin: 2;
   --colorA: #74569b;
   --colorB: #f7ffae;
+  --colorC: #96fbc7;
+  --colorD: #d8bfd8;
+  --colorE: #ffb3cb;
 }
 
 html {
@@ -48,23 +51,38 @@ body {
   overflow: hidden;
 }
 
-aside {
+aside,
+.blocks {
   font-family: "Unscii", "Courier New", monospace;
   white-space: nowrap;
   font-size: 1rem;
+  letter-spacing: 0;
   line-height: 1rem;
+  vertical-align: text-bottom;
 }
 
-main {
+body {
   font-family: "Quadraat Sans Mono", "Courier New", monospace;
   font-size: 0.85rem;
   letter-spacing: 0.075rem;
   line-height: 1rem;
 }
 
-p {
+p,
+aside {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--colorC);
+  transition: color 250ms ease-out, background-color 250ms ease-out;
+}
+
+a:hover {
+  color: var(--colorA);
+  background-color: var(--colorC);
 }
 
 ::selection {
