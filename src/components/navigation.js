@@ -10,7 +10,7 @@ export default function Navigation(props) {
     </span>
   ));
 
-  const fillChar = "\u2550";
+  const fillChar = "\u2591";
   let fill = "";
   for (let i = 0; i < 60; i++) {
     fill += fillChar;
@@ -18,7 +18,7 @@ export default function Navigation(props) {
 
   return (
     <div className="navigation">
-      <span className="blocks">{"\u{1fbc1}\u{1fbc2}\u{1fbc3}"} </span>
+      {/*<span className="blocks">{fillChar}{fillChar}&nbsp;</span>*/}
       {links}
       <span className="blocks">{fill}</span>
     </div>
