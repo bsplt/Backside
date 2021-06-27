@@ -1,4 +1,5 @@
-body {
-  background: var(--colorD);
-  color: var(--colorA);
+.about {
+  --colorBackground: var(--themeD);
+  --colorText: var(--themeA);
+  --colorLink: var(--themeB);
 }

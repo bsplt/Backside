@@ -4,7 +4,7 @@ import "./layout.css";
 import Navigation from "./navigation.js";
 import Animation from "./navAnimation.js";
 
-export default function Layout({ children }) {
+export default function Layout(props) {
   const animation = Animation();
   const navigation = [
     { page: "/", content: animation, renderAsBlocks: true },
@@ -13,9 +13,11 @@ export default function Layout({ children }) {
   ];
 
   return (
-    <div className="layout">
-      <Navigation navigation={navigation} />
-      {children}
+    <div className={["wrap", props.style].join(" ")}>
+      <div className={"layout"}>
+        <Navigation navigation={navigation} />
+        {props.children}
+      </div>
     </div>
   );
 }

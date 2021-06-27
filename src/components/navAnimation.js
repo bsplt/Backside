@@ -5,7 +5,6 @@ export default function Animation() {
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-    /*
     const charSet = [
       "\u{1FB70}",
       "\u{1FB71}",
@@ -13,9 +12,7 @@ export default function Animation() {
       "\u{1FB73}",
       "\u{1FB74}",
       "\u{1FB75}",
-    ];*/
-
-    const charSet = ["\u{2574}", "\u{2500}", "\u{2576}"];
+    ];
 
     const interval = setInterval(() => {
       setSeconds((seconds) => seconds + 1);
@@ -25,7 +22,7 @@ export default function Animation() {
       newComp +=
         charSet[
           Math.round(
-            Math.sin(seconds * 1.256 * 1 + i * 1.256 * 2) *
+            Math.sin(seconds * 1.256 * 2 + i * 1.256 * 2) *
               ((charSet.length - 1) / 2) +
               (charSet.length - 1) / 2
           )

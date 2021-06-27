@@ -11,11 +11,11 @@
 :root {
   --count: 64;
   --margin: 2;
-  --colorA: #74569b;
-  --colorB: #f7ffae;
-  --colorC: #96fbc7;
-  --colorD: #d8bfd8;
-  --colorE: #ffb3cb;
+  --themeA: #74569b;
+  --themeB: #f7ffae;
+  --themeC: #96fbc7;
+  --themeD: #d8bfd8;
+  --themeE: #ffb3cb;
 }
 
 html {
@@ -35,12 +35,19 @@ html {
   }
 }
 
-body {
-  background: var(--colorA);
-  color: var(--colorB);
+.wrap {
+  --colorBackground: var(--themeA);
+  --colorText: var(--themeB);
+  --colorLink: var(--themeC);
+}
+
+.wrap {
   display: flex;
   justify-content: center;
   overflow-x: hidden;
+  min-height: 100vh;
+  background: var(--colorBackground);
+  color: var(--colorText);
 }
 
 .layout {
@@ -76,25 +83,26 @@ aside {
 
 a {
   text-decoration: none;
-  color: var(--colorC);
+  color: var(--colorLink);
   transition: color 250ms ease-out, background-color 250ms ease-out;
 }
 
 a:hover {
-  color: var(--colorA);
-  background-color: var(--colorC);
+  color: var(--colorBackground);
+  background-color: var(--colorLink);
 }
 
 ::selection {
-  color: var(--colorA);
-  background: var(--colorB);
+  color: var(--colorBackground);
+  background: var(--colorText);
 }
 
 ::-webkit-scrollbar {
   width: 0.5rem;
+  background: var(--colorBackground);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--colorB);
+  background-color: var(--colorText);
   outline: 0;
 }
