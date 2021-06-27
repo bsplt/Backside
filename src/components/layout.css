@@ -9,13 +9,20 @@
 }
 
 :root {
+  /* Layout */
   --count: 64;
   --margin: 2;
+
+  /* Themeing */
   --themeA: #74569b;
   --themeB: #f7ffae;
   --themeC: #96fbc7;
   --themeD: #d8bfd8;
   --themeE: #ffb3cb;
+  /* Assigning */
+  --colorBackground: var(--themeA);
+  --colorText: var(--themeB);
+  --colorLink: var(--themeC);
 }
 
 html {
@@ -33,12 +40,6 @@ html {
   html {
     font-size: calc(200vw / (var(--count) + var(--margin) * 2) * 1);
   }
-}
-
-.wrap {
-  --colorBackground: var(--themeA);
-  --colorText: var(--themeB);
-  --colorLink: var(--themeC);
 }
 
 .wrap {
@@ -60,7 +61,7 @@ html {
 
 aside,
 .blocks {
-  font-family: "Unscii", "Courier New", monospace;
+  font-family: var(--fontBlocks), "Courier New", monospace;
   white-space: nowrap;
   font-size: 1rem;
   letter-spacing: 0;
@@ -69,7 +70,7 @@ aside,
 }
 
 body {
-  font-family: "Quadraat Sans Mono", "Courier New", monospace;
+  font-family: var(--fontText), "Courier New", monospace;
   font-size: 0.85rem;
   letter-spacing: 0.075rem;
   line-height: 1rem;
@@ -99,7 +100,7 @@ a:hover {
 
 ::-webkit-scrollbar {
   width: 0.5rem;
-  background: var(--colorBackground);
+  background-color: var(--colorBackground);
 }
 
 ::-webkit-scrollbar-thumb {
