@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: "Inconsolata Medium";
+  src: url("../assets/fonts/Inconsolata-Medium.woff2");
+}
+
+@font-face {
   font-family: "Unscii";
   src: url("../assets/fonts/unscii-16.woff2");
 }
@@ -19,6 +24,9 @@
   --themeC: #96fbc7;
   --themeD: #d8bfd8;
   --themeE: #ffb3cb;
+  --fontText: "Inconsolata Medium";
+  --fontBlocks: "Unscii";
+
   /* Assigning */
   --colorBackground: var(--themeA);
   --colorText: var(--themeB);
