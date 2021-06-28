@@ -38,6 +38,8 @@ html {
     clamp(125vw, (100vw * 0.5 + 688px * 1.5), 200vw) /
       (var(--count) + var(--margin) * 2)
   );
+
+  overflow: hidden;
 }
 
 @media (max-width: 688px) {
@@ -54,17 +56,20 @@ html {
   display: flex;
   justify-content: center;
   overflow-x: hidden;
-  min-height: 100vh;
+  height: 100vh;
+  overflow-y: scroll;
   background: var(--colorBackground);
   color: var(--colorText);
 }
 
 .layout {
+  overflow-y: auto;
   width: calc((var(--count)) * 0.5rem);
   margin-left: calc(var(--margin) * 0.5rem);
   margin-right: calc(var(--margin) * 0.5rem);
   margin-top: calc(var(--margin) * 0.5rem);
   overflow: hidden;
+  height: max-content;
 }
 
 aside,
