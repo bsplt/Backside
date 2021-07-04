@@ -2,13 +2,11 @@ import React from "react";
 import "/node_modules/modern-normalize/modern-normalize.css";
 import "./layout.css";
 import Navigation from "./navigation.js";
-import Animation from "./navAnimation.js";
 
 export default function Layout(props) {
-  const animation = Animation();
   const navigation = [
-    { page: "/", content: animation, renderAsBlocks: true },
-    { page: "/", content: "Projects" },
+    { page: "/", content: "/" },
+    { page: "/", content: "Work" },
     { page: "/about", content: "About" },
   ];
 
