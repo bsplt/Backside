@@ -63,12 +63,11 @@ html {
 }
 
 .layout {
-  overflow-y: auto;
   width: calc((var(--count)) * 0.5rem);
   margin-left: calc(var(--margin) * 0.5rem);
   margin-right: calc(var(--margin) * 0.5rem);
   margin-top: calc(var(--margin) * 0.5rem);
-  overflow: hidden;
+  overflow: visible;
   height: max-content;
 }
 
