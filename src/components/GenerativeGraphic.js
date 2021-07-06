@@ -10,7 +10,7 @@ export default function Graphic(props) {
     const height = Number(props.height);
     const targetLine = height - 2;
     const targetChars = targetLine * width;
-    if (width < 1 || height < 1) return;
+    if (width < 1 || height < 1) return null;
     const charSet = ["\u{00A0}", "\u{2591}", "\u{1FB90}", "\u{2593}"];
     const randomSet = getInitalSetRange(width);
     let newComp = getInitialValue(randomSet, Math.min(charSet.length * 2, 9));
@@ -18,7 +18,6 @@ export default function Graphic(props) {
     newComp = getMultiplications(newComp, targetChars / 2);
     newComp = getCellulation(newComp, width, charSet.length);
     newComp = getLines(newComp, width, charSet, targetChars);
-    console.log(targetChars);
     setComp(newComp);
   }, [props.width, props.height]);
 
@@ -79,7 +78,7 @@ const getCellulation = (input, width, neighborhoods) => {
     let newLine = "";
 
     for (let j = 0; j < line.length; j++) {
-      if ((i / width) % 2 == 0) {
+      if ((i / width) % 2 === 0) {
         newLine += line.charAt(j);
       } else if (
         j > 0 &&
@@ -89,7 +88,7 @@ const getCellulation = (input, width, neighborhoods) => {
         newLine += line.charAt(j - 1);
       } else if (
         j < line.length - 1 &&
-        line.charAt(j + 1) % neighborhoods ==
+        line.charAt(j + 1) % neighborhoods ===
           (line.charAt(j) + 1) % neighborhoods
       ) {
         newLine += line.charAt(j + 1);
