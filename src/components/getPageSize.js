@@ -6,6 +6,7 @@ export default function GetPageSize() {
   const [height, setHeight] = useState(0);
   const [rows, setRows] = useState(0);
   const [listener, setListener] = useState(false);
+  const [out, setOut] = useState([null]);
 
   const handleResize = () => {
     setWidth(window.innerWidth);
@@ -16,21 +17,29 @@ export default function GetPageSize() {
     if (!listener) {
       window.addEventListener("resize", handleResize);
       setListener(true);
+      handleResize();
     }
     setCols(getCols());
     setRows(getRows(cols));
   }, [width, height]);
 
-  const out = [parseInt(cols), parseInt(rows)];
+  useEffect(() => {
+    setOut([cols, rows]);
+  }, [cols, rows]);
+
   return out;
 }
 
 const getCols = () => {
-  return getComputedStyle(document.documentElement).getPropertyValue("--count");
+  return parseInt(
+    getComputedStyle(document.documentElement).getPropertyValue("--count")
+  );
 };
 
 const getRows = (cols) => {
   const width = document.querySelector(".layout").offsetWidth;
   const height = window.innerHeight;
-  return Math.floor(height / (width / cols) / 2);
+  const out = Math.floor(height / (width / cols) / 2);
+  console.log(out);
+  return out;
 };
