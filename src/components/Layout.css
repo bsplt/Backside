@@ -24,7 +24,7 @@
 
   /* Adjusting Font */
   --fontTextSize: 0.75em;
-  --fontTextSpacing: 0.045em;
+  --fontTextSpacing: 0.0465em;
 
   /* Assigning */
   --colorBackground: var(--themeA);
