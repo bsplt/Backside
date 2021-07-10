@@ -1,7 +1,7 @@
 import * as React from "react";
-import Layout from "../components/layout.js";
+import Layout from "../components/Layout.js";
 import Graphic from "../components/GenerativeGraphic.js";
-import GetPageSize from "../components/getPageSize";
+import GetPageSize from "../functions/GetPageSize.js";
 
 const IndexPage = () => {
   return (

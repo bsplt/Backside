@@ -1,13 +1,13 @@
 import React from "react";
 import "/node_modules/modern-normalize/modern-normalize.css";
-import "./layout.css";
-import Navigation from "./navigation.js";
+import "./Layout.css";
+import Navigation from "./Navigation.js";
 
 export default function Layout(props) {
   const navigation = [
-    { page: "/", content: "/" },
-    { page: "/", content: "Work" },
-    { page: "/about", content: "About" },
+    { page: "/", content: "home" },
+    { page: "/", content: "work" },
+    { page: "/about", content: "about" },
   ];
 
   return (

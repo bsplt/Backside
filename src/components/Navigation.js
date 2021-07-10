@@ -1,5 +1,5 @@
 import React from "react";
-import "./navigation.css";
+import "./Navigation.css";
 import { Link } from "gatsby";
 
 export default function Navigation(props) {
