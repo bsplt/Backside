@@ -8,14 +8,14 @@ export default function Graphic(props) {
   useEffect(() => {
     const width = Number(props.width);
     const height = Number(props.height);
-    const targetLine = height - 2;
+    const targetLine = height - 3;
     const targetChars = targetLine * width;
     if (width < 1 || height < 1) return null;
     const charSet = ["\u{00A0}", "\u{2591}", "\u{1FB90}", "\u{2593}"];
     const randomSet = getInitalSetRange(width);
     let newComp = getInitialValue(randomSet, Math.min(charSet.length * 2, 9));
     newComp = getFill(newComp, width, targetLine);
-    newComp = getMultiplications(newComp, targetChars / 2);
+    newComp = getMultiplications(newComp, targetChars / 2, width);
     newComp = getCellulation(newComp, width, charSet.length);
     newComp = getLines(newComp, width, charSet, targetChars);
     setComp(newComp);
@@ -36,11 +36,13 @@ const getInitialValue = (size, range) => {
   return value;
 };
 
-const getMultiplicationTable = (length) => {
+const getMultiplicationTable = (length, width) => {
   const table = [];
   for (let i = 0; i <= length; i++) {
     const scale =
-      Math.random() > 0.75 ? randomRange(15, 20) : randomRange(1, 4);
+      Math.random() > 0.75
+        ? randomRange(width * 0.15, width * 0.33)
+        : randomRange(1, 3);
     table.push(Math.max(Math.floor(Math.random() * scale), 1));
   }
   return table;
@@ -54,8 +56,8 @@ const getFill = (input, width, lines) => {
   return output;
 };
 
-const getMultiplications = (input, target) => {
-  const table = getMultiplicationTable(9);
+const getMultiplications = (input, target, width) => {
+  const table = getMultiplicationTable(8, width);
   let output = "";
   for (let i = 0; i < input.length; i++) {
     const char = input.charAt(i);
@@ -82,7 +84,7 @@ const getCellulation = (input, width, neighborhoods) => {
         newLine += line.charAt(j);
       } else if (
         j > 0 &&
-        line.charAt(j - 1) % neighborhoods ==
+        line.charAt(j - 1) % neighborhoods ===
           (line.charAt(j) + 1) % neighborhoods
       ) {
         newLine += line.charAt(j - 1);
@@ -100,10 +102,6 @@ const getCellulation = (input, width, neighborhoods) => {
     output += newLine;
   }
   return output;
-};
-
-const getShifts = (input, width) => {
-  let shift = "";
 };
 
 const getLines = (_input, width, charSet, target) => {
