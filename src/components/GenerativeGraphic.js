@@ -4,6 +4,7 @@ import "./GenerativeGraphic.css";
 
 export default function Graphic(props) {
   const [comp, setComp] = useState();
+  const [refresh, setRefresh] = useState(1);
 
   useEffect(() => {
     const width = Number(props.width);
@@ -17,11 +18,23 @@ export default function Graphic(props) {
     newComp = getFill(newComp, width, targetLine);
     newComp = getMultiplications(newComp, targetChars / 2, width);
     newComp = getCellulation(newComp, width, charSet.length);
-    newComp = getLines(newComp, width, charSet, targetChars);
+    newComp = getLines(newComp, width, charSet, targetChars - 2);
     setComp(newComp);
-  }, [props.width, props.height]);
+  }, [props.width, props.height, refresh]);
 
-  return <div className="blocks">{comp}</div>;
+  return (
+    <div className="blocks graphic">
+      {comp}
+      <a
+        style={{ userSelect: "none" }}
+        onClick={() => {
+          setRefresh(refresh + 1);
+        }}
+      >
+        {"\u{EC00}\u{EC00}"}
+      </a>
+    </div>
+  );
 }
 
 const getInitalSetRange = (width) => {
@@ -112,10 +125,12 @@ const getLines = (_input, width, charSet, target) => {
     for (let j = i; j < Math.min(i + width, input.length); j++) {
       line += charSet[input.charAt(j) % charSet.length];
     }
-    line += "\u{0A}";
+    if (i + width - 1 < input.length) {
+      line += "\u{0A}";
+    }
     output += line;
   }
-  return <div className="graphic">{output}</div>;
+  return output;
 };
 
 const scale = (input, in_min, in_max, out_min, out_max) => {
