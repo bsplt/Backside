@@ -1,0 +1,29 @@
+.description {
+  padding-top: 1em;
+  margin-top: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  padding-left: 0em;
+  padding-right: 0em;
+  position: relative;
+}
+
+.descriptionContent {
+  z-index: 10;
+  position: relative;
+}
+
+.descriptionBackground {
+  width: 100vw;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: calc(-50vw + 50%);
+  background-color: var(--colorLink);
+  mask-image: url(../assets/images/test.svg);
+  mask-size: 0.5rem;
+}
+
+.description::selection {
+  color: var(--colorLink);
+}
