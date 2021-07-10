@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 export default function Navigation(props) {
   const navigation = props.navigation;
   const links = navigation.map((link) => (
-    <span className={link.renderAsBlocks ? "blocks" : ""}>
+    <span>
       <Link to={link.page}>{link.content}</Link>&nbsp;
     </span>
   ));
