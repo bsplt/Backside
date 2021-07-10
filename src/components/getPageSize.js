@@ -40,6 +40,5 @@ const getRows = (cols) => {
   const width = document.querySelector(".layout").offsetWidth;
   const height = window.innerHeight;
   const out = Math.floor(height / (width / cols) / 2);
-  console.log(out);
   return out;
 };
